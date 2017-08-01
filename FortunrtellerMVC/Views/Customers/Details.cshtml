@@ -1,0 +1,72 @@
+﻿@model FortunrtellerMVC.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ROYGBIV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROYGBIV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Siblings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Siblings)
+        </dd>
+
+    </dl>
+    <div>
+        <p>
+            @Html.DisplayFor(model => model.FirstName)  @Html.DisplayFor(model => model.LastName)  will retire in <span>@ViewBag.Age</span> years with $<span>@ViewBag.BirthMonth</span> in the bank, a vacation home in <span>@ViewBag.VacationHome</span> and <span>@ViewBag.Transporation</span> 
+        </p>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
